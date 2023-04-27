@@ -1,7 +1,8 @@
+import * as C from './components/body/index'
 
 const App = () => {
   return (
-    <h1>Olá</h1>
+    <C.Container/>
   )
 }
 export default App;
