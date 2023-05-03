@@ -7,8 +7,9 @@ const App = () => {
   return (
     <Container>
       <img src={MinhaImagem} alt='imagem-principal'></img>
+
       <SectionForm> {/*sessao form*/}
-        <h1>Login Form 🐞</h1>
+        <h1>Login - Lucas Web 🐞</h1>
         <article>
           <label>Email</label>
           <input id='email' type='email'></input>

@@ -13,11 +13,38 @@ export const SectionForm = styled.section`
     h1 {
         font-size: 30px;
         color: white;
+        font-family: 'Orbitron', sans-serif;
     }
 
     article {
         padding: 10px;
         color: white;
+    }
+
+    label {
+        display: flex;
+        margin-bottom: 5px;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    input {
+        display: flex;
+        border-radius: 5px;
+        border: none;
+        width: 300px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 1.10em;
+        border-radius: 5px;
+        border: none;
+        padding: 8px;
+        width: 320px;
+        font-family: 'Orbitron', sans-serif;
+        color: white;
+        background-color: blue;
+        cursor: pointer;
     }
 
 `
