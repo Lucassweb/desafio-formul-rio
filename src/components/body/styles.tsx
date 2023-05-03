@@ -1,8 +1,10 @@
 import styled from "styled-components";
-export const MainContent = styled.section` 
+
+export const Container = styled.section`
+
    img {
-    height: 969px;
-    width: 100%;
+      height: 969px;
+      width: 100%;
    }
    
 `
