@@ -1,6 +1,7 @@
 import {Container} from './components/Body/styles'
 import { SectionForm } from '././components/Section/style'
 import MinhaImagem from './assets/img/duvar.jpg'
+import { useState } from 'react'
 
 // Instruções:
 // * Você tem um formulário de login INCOMPLETO
@@ -15,20 +16,28 @@ import MinhaImagem from './assets/img/duvar.jpg'
 // todo - Mostre um alerta caso o login seja efetuado com sucesso (javascript alert). Investigue a função login() para entender como ter sucesso na requisição.
 
 const App = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+
+  const handleEmail = (event: any) => {
+    const value = event.target.value
+    setEmail(value);
+  }
   return (
     <Container>
-      <img src={MinhaImagem} alt='imagem-principal'></img>
+      <img src={MinhaImagem} alt='imagem-principal'/>
 
       <SectionForm> {/*sessao form*/}
         <h1>Login - Lucas Web 🐞</h1>
         <article>
           <label>Email</label>
-          <input id='email' type='email'></input>
+          <input id='email' type='email' value={email} onChange={handleEmail}/>
         </article>
 
         <article>
           <label>Password</label>
-          <input></input>
+          <input id='{password}' type='{password}'/>
         </article>
 
         <article>
