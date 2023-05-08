@@ -19,11 +19,16 @@ const App = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-
   const handleEmail = (event: any) => {
     const value = event.target.value
     setEmail(value);
   }
+
+  const handlePassword = (event: any) => {
+    const value = event.target.value
+    setPassword(value);
+  }
+  
   return (
     <Container>
       <img src={MinhaImagem} alt='imagem-principal'/>
@@ -37,7 +42,7 @@ const App = () => {
 
         <article>
           <label>Password</label>
-          <input id='{password}' type='{password}'/>
+          <input id='{password}' type='{password}' value={password} onChange={handlePassword}/>
         </article>
 
         <article>
