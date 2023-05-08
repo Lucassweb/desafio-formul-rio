@@ -28,6 +28,10 @@ const App = () => {
     const value = event.target.value
     setPassword(value);
   }
+
+  const handleSubmit = () => {
+    console.log('submit');
+  }
   
   return (
     <Container>
@@ -42,11 +46,13 @@ const App = () => {
 
         <article>
           <label>Password</label>
-          <input id='{password}' type='{password}' value={password} onChange={handlePassword}/>
+          <input id={'password'} type={'password'} value={password} onChange={handlePassword}/>
         </article>
 
         <article>
-          <button>Login</button>
+          <button onClick={handleSubmit} disabled={email === '' || password.length < 6}>
+            Login
+          </button>
         </article>
       </SectionForm>
     </Container>
