@@ -40,7 +40,9 @@ const App = () => {
     let values = { email: email, password: password }
 
     login(values)
-      .then(() => { })
+      .then(() => { 
+        alert('Login efetuado com sucesso !') //senha: password123
+      })
       .catch((error) => {
         setError(error)
       }).finally(() => {
