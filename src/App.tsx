@@ -20,6 +20,7 @@ import { useState } from 'react'
 const App = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState<any>(null);
 
   const handleEmail = (event: any) => {
     const value = event.target.value
@@ -32,15 +33,14 @@ const App = () => {
   }
 
   const handleSubmit = () => {
-    console.log('submit');
-
     let values = { email: email, password: password }
-    login
-      (values)
+    login(values)
       .then(() => {
 
-      }).catch((error) => {
-        console.log(error);
+      })
+      
+      .catch((error) => {
+        setError(error)
       })
   }
 
@@ -50,7 +50,7 @@ const App = () => {
 
       <SectionForm> {/*sessao form*/}
         <h1>Lucas Web 🐞</h1>
-        {/* <h2>Aqui vou colocar meu error !!!</h2> */}
+        {error && <h2>{error.message}</h2>}
         <article>
           <label>Email</label>
           <input id='email' type='email' value={email} onChange={handleEmail} />
@@ -62,7 +62,7 @@ const App = () => {
         </article>
 
         <article>
-          <button onClick={handleSubmit} disabled={email === '' || password.length < 6}>
+          <button onClick={handleSubmit} disabled={email === ''|| password.length < 6}>
             Login
           </button>
         </article>
