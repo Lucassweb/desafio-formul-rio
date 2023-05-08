@@ -38,7 +38,7 @@ const App = () => {
       <img src={MinhaImagem} alt='imagem-principal'/>
 
       <SectionForm> {/*sessao form*/}
-        <h1>Login - Lucas Web 🐞</h1>
+        <h1>Lucas Web 🐞</h1>
         <article>
           <label>Email</label>
           <input id='email' type='email' value={email} onChange={handleEmail}/>

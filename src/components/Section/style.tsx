@@ -37,14 +37,20 @@ export const SectionForm = styled.section`
 
     button {
         font-size: 1.10em;
+        font-weight: bold;
         border-radius: 5px;
         border: none;
         padding: 8px;
         width: 320px;
         font-family: 'Orbitron', sans-serif;
         color: white;
-        background-color: blue;
+        background-color: #54125a;
         cursor: pointer;
+    }
+
+    button:hover {
+        transition: all 1.3s ease;
+        background-color: blue;
     }
 
 `
