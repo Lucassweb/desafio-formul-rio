@@ -1,4 +1,6 @@
-import {Container} from './components/Body/styles'
+import { login } from './utils'
+
+import { Container } from './components/Body/styles'
 import { SectionForm } from '././components/Section/style'
 import MinhaImagem from './assets/img/duvar.jpg'
 import { useState } from 'react'
@@ -31,22 +33,32 @@ const App = () => {
 
   const handleSubmit = () => {
     console.log('submit');
+
+    let values = { email: email, password: password }
+    login
+      (values)
+      .then(() => {
+
+      }).catch((error) => {
+        console.log(error);
+      })
   }
-  
+
   return (
     <Container>
-      <img src={MinhaImagem} alt='imagem-principal'/>
+      <img src={MinhaImagem} alt='imagem-principal' />
 
       <SectionForm> {/*sessao form*/}
         <h1>Lucas Web 🐞</h1>
+        {/* <h2>Aqui vou colocar meu error !!!</h2> */}
         <article>
           <label>Email</label>
-          <input id='email' type='email' value={email} onChange={handleEmail}/>
+          <input id='email' type='email' value={email} onChange={handleEmail} />
         </article>
 
         <article>
           <label>Password</label>
-          <input id={'password'} type={'password'} value={password} onChange={handlePassword}/>
+          <input id={'password'} type={'password'} value={password} onChange={handlePassword} />
         </article>
 
         <article>

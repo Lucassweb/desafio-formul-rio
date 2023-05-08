@@ -16,6 +16,12 @@ export const SectionForm = styled.section`
         font-family: 'Orbitron', sans-serif;
     }
 
+    /* h2 {
+        font-size: 20px;
+        color: red;
+        font-family: 'Orbitron', sans-serif;
+    } */
+
     article {
         padding: 10px;
         color: white;
