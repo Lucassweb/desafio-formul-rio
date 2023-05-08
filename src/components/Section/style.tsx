@@ -43,13 +43,12 @@ export const SectionForm = styled.section`
 
     button {
         font-size: 1.10em;
-        font-weight: bold;
         border-radius: 5px;
         border: none;
         padding: 8px;
         width: 320px;
         font-family: 'Orbitron', sans-serif;
-        color: white;
+        color: black;
         background-color: #54125a;
         cursor: pointer;
     }

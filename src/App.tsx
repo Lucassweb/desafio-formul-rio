@@ -21,6 +21,7 @@ const App = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<any>(null);
+  const [isRequesting, setIsRequesting] = useState(false);
 
   const handleEmail = (event: any) => {
     const value = event.target.value
@@ -33,14 +34,17 @@ const App = () => {
   }
 
   const handleSubmit = () => {
-    let values = { email: email, password: password }
-    login(values)
-      .then(() => {
+    setError(null);
+    setIsRequesting(true);
 
-      })
-      
+    let values = { email: email, password: password }
+
+    login(values)
+      .then(() => { })
       .catch((error) => {
         setError(error)
+      }).finally(() => {
+        setIsRequesting(false)
       })
   }
 
@@ -62,7 +66,7 @@ const App = () => {
         </article>
 
         <article>
-          <button onClick={handleSubmit} disabled={email === ''|| password.length < 6}>
+          <button onClick={handleSubmit} disabled={email === '' || password.length < 6 || isRequesting}>
             Login
           </button>
         </article>
